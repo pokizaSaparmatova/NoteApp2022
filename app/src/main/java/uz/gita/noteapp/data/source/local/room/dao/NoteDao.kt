@@ -17,7 +17,7 @@ interface NoteDao {
     @Update()
     fun update(title: String, content: String, date: String, id: String)
 
-    @Query("Delete from NoteEntity where date_time=:id")
+    @Query("Delete from NoteEntity where id=:id")
     fun delete(id:String)
 
 }
