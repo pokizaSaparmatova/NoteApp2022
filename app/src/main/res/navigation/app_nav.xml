@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.noteapp.presentation.ui.screen.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.noteapp.presentation.ui.screen.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main">
+        <action
+            android:id="@+id/action_mainScreen_to_addNoteScreen"
+            app:destination="@id/addNoteScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_addCheckScreen2"
+            app:destination="@id/addCheckScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteScreen"
+        android:name="uz.gita.noteapp.presentation.ui.screen.AddNoteScreen"
+        android:label="screen_add_note"
+        tools:layout="@layout/screen_add_note">
+        <argument
+            android:name="note"
+            app:argType=".data.model.NoteModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCheckScreen2"
+        android:name="uz.gita.noteapp.presentation.ui.screen.AddCheckScreen"
+        android:label="screen_check"
+        tools:layout="@layout/screen_check">
+        <argument
+            android:name="note"
+            app:argType=".data.model.NoteModel" />
+    </fragment>
+</navigation>

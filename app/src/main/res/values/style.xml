@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">97%</item>
+    </style>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- makes all dialogs in your app use your dialog theme by default -->
+        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">?alertDialogTheme</item>
+        <item name="dialogTheme">?alertDialogTheme</item>
+        <item name="android:dialogTheme">?alertDialogTheme</item>
+    </style>
+
+    <!-- define your dialog theme -->
+    <style name="DialogTheme" parent="Theme.AppCompat.DayNight.Dialog.MinWidth">
+    </style>
+
+</resources>

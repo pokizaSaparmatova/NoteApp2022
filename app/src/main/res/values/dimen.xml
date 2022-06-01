@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="match_parent">-1dp</dimen>
+    <dimen name="main_left_menu_user_account_width">@dimen/match_parent</dimen>
+    <dimen name="main_left_menu_user_account_height">@dimen/match_parent</dimen>
+</resources>
